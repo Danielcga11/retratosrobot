@@ -1,64 +1,98 @@
+
 public class RetratosRobot{
     public static void main(String[] args) {
-
+        boolean salir = false;
+        do {
         int p = Integer.parseInt(IO.readln("Escoge un peinado para el robot (1-4): "));
         int o = Integer.parseInt(IO.readln("Escoge ojos para el robot (1-4): "));
         int n = Integer.parseInt(IO.readln("Escoge nariz y orejas para el robot (1-4): "));
         int bo = Integer.parseInt(IO.readln("Escoge boca para el robot (1-4): "));
         int ba = Integer.parseInt(IO.readln("Escoge barbilla para el robot (1-4): "));
 
+        System.out.println(Pelo(p));
+        System.out.println(Orejas(o));
+        System.out.println(Nariz(n));
+        System.out.println(Boca(bo));
+        System.out.println(Barbilla(ba));
+        String respuesta = IO.readln("Desea salir?(N/Y) ");
+        if (respuesta.equalsIgnoreCase("Y"))
+            salir = true;
+        } while (salir == false);
+        System.out.println("El programa ha finalizado");
+
+
+
+    }
+    static String Pelo(int p){
+        String pelo = "";
         switch (p){
             case 1:
-            System.out.println("WWWWWWWWW");
+            pelo = "WWWWWWWWW";
             break;
             case 2:
-            System.out.println("\\\\\\//////");
+            pelo = "\\\\\\//////";
             break;
             case 3:
-            System.out.println("\"||||||||\"");
+            pelo = "\"||||||||\"";
             break;
             case 4:
-            System.out.println("|||||||||");
+            pelo = "|||||||||";
         }
+        return pelo;
+    }
+    static String Orejas(int o){
+        String orejas = "";
         switch (o){
             case 1:
-            System.out.println("| o o |");
+            orejas = "| o o |";
             break;
             case 2:
-            System.out.println("|-(· ·)-|");
+            orejas = "|-(· ·)-|";
             break;
             case 3:
-            System.out.println("|-(o o)-|");
+            orejas = "|-(o o)-|";
             break;
             case 4:
-            System.out.println("| \\ / |");
+            orejas = "| \\ / |";
         }
+        return orejas;
+    }
+    static String Nariz(int n){
+        String nariz = "";
         switch (n){
             case 1:
-            System.out.println("@ J @");
+            nariz = "@ J @";
             break;
             case 2:
-            System.out.println("{ \" }");
+            nariz = "{ \" }";
             break;
             case 3:
-            System.out.println("[ j ]");
+            nariz = "[ j ]";
             break;
             case 4:
-            System.out.println("< - >");
+            nariz = "< - >";
         }
+        return nariz;
+    }
+    static String Boca(int bo){
+        String boca = "";
         switch (bo){
             case 1:
-            System.out.println("| === |");
+            boca = "| === |";
             break;
             case 2:
-            System.out.println("| - |");
+            boca = "| - |";
             break;
             case 3:
-            System.out.println("| ___ |");
+            boca = "| ___ |";
             break;
             case 4:
-            System.out.println("| --- |");
+            boca = "| --- |";
         }
+        return boca;
+    }
+    static String Barbilla(int ba){
+        String barbilla = "";
         switch (ba){
             case 1:
             System.out.println("\\_______/");
@@ -72,5 +106,6 @@ public class RetratosRobot{
             case 4:
             System.out.println("\\mmmmmmm/");
         }
+        return barbilla;
     }
 }
